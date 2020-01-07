@@ -14,7 +14,7 @@
 
 ### 项目清单下载
 
-1. [数据库下载](https://github.com/NFUNM067/data-visualization)
+1.[数据库下载](https://github.com/NFUNM067/data-visualization)
 
 2.[代码查看](https://github.com/NFUNM067/data-visualization/blob/master/%E4%BB%A3%E7%A0%81%E4%B8%8B%E8%BD%BD%E5%92%8C%E8%BF%90%E8%A1%8C/app.ipynb)
 
