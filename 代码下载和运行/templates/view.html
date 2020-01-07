@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ the_title }}</title>
+    <link rel="stylesheet" href="static/hf.css" />
+</head>
+<body>
+<h2 align="center">{{ the_title }}</h2>
+</br>
+</br>
+<p style="text-indent:2em">
+<font color='000000'>本次项目做的是中国各省城市生活垃圾清运和处理情况分析，主要通过生活垃圾清运量、生活垃圾无害化处理量、处理率、处理能力、处理方式（填埋和焚烧）这五个方面进行分析。本项目的意义在于对中国各省城市生活垃圾的清运和处理情况进行可视化分析，从可视化结果针对中国各省解决城市生活垃圾提出有效建议，从而达到缓解垃圾处理压力、促进循环经济和可持续发展的目的。</font></p>
+</br>
+</br>	
+
+<form method="POST" action="/hurun">
+<table><p>选择区域查找:</p></table>
+    <select name="the_region_selected">
+        {% for item in the_select_region %}
+            <option value="{{ item }}">{{ item }}</option>
+        {% endfor %}
+    </select>
+<p><input value='确定' type='SUBMIT' class="hurun" ></p>
+<style>p{display:inline;} </style>
+</form>
+
+<form style="float:left;" method="POST" action="/clear">
+<p><input name="the_region_selected" value='生活垃圾清运量可视化' type='SUBMIT' class="clear"></p>
+</form>
+
+<form style="float:left;" method="POST" action="/deal">
+<p><input name="the_region_selected" value='生活垃圾无害化处理量可视化' type='SUBMIT' class="deal"></p>
+</form>
+
+
+<form style="float:left;" method="POST" action="/with">
+<p><input name="the_region_selected" value='生活垃圾无害化处理率可视化' type='SUBMIT' class="with"></p>
+</form>
+
+<form style="float:left;" method="POST" action="/way">
+<p><input name="the_region_selected" value='填埋和焚烧两种方式对比可视化' type='SUBMIT' class="way"></p>
+</form>
+
+
+
+{{ the_plot_all|safe }}
+{{ the_plot_all_1|safe }}
+{{ the_plot_all_2|safe }}
+{{ the_plot_all_3|safe }}
+{{ the_res|safe }}
+
+
+</body>
+</html>

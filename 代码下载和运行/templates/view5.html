@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ the_title }}</title>
+    <link rel="stylesheet" href="static/hf.css" />
+</head>
+<body>
+<h2 align="center">{{ the_title }}</h2>	
+	
+	
+<form method="POST" action="/hurun">
+<table><p>选择区域查找:</p></table>
+
+    <select name="the_region_selected">
+        {% for item in the_select_region %}
+            <option value="{{ item }}">{{ item }}</option>
+        {% endfor %}
+    </select>
+    <p><input value='确定' type='SUBMIT' class="hurun" ></p>
+<style>p{display:inline;} </style>
+</form>
+
+
+<form method="GET" action="/">
+<p><input name="the_region_selected" value='返回首页' type='button' class="return" onclick ="location.href='/'"></p>
+</form>
+
+<form style="float:left;" method="POST" action="/clear">
+<p><input name="the_region_selected" value='生活垃圾清运量可视化' type='SUBMIT' class="clear"></p>
+</form>	
+
+<form style="float:left;" method="POST" action="/deal">
+<p><input name="the_region_selected" value='生活垃圾无害化处理量可视化' type='SUBMIT' class="deal"></p>
+</form>
+
+<form style="float:left;" method="POST" action="/with">
+<p><input name="the_region_selected" value='生活垃圾无害化处理率可视化' type='SUBMIT' class="with"></p>
+</form>
+
+<form style="float:left;" method="POST" action="/way">
+<p><input name="the_region_selected" value='填埋和焚烧两种方式对比可视化' type='SUBMIT' class="way"></p>
+</form>
+
+
+{{ the_plot_all|safe }}
+{{ the_plot_all_1|safe }}
+{{ the_plot_all_2|safe }}
+{{ the_plot_all_3|safe }}
+
+<p style="font-family:arial;color:black;font-size:20px;">可视化结果分析</p>
+
+</br>
+</br>
+<p style="text-indent:2em">
+<font color='000000'>上图是【中国各省城市生活垃圾无害化填埋量和无害化焚烧量的对比图】，从图中我们可以看出国内大部分省份的生活垃圾处理方式还是以卫生填埋为主。从区域情况来看，各地区焚烧处理方式利用情况差异性较大。经济发达地区采用焚烧处理方式比率较高，其中华东、西南、华南这三个区域焚烧方式利用率较集中，而西北、东北地区焚烧方式利用率较低。而偏远地区采用卫生填埋处理方式比率较高，其中东北、西北这两个区域卫生填埋方式利用率较集中。</font></p>
+</br>
+</br>
+
+<p style="font-family:arial;color:black;font-size:20px;">建议</p>
+
+</br>
+</br>
+<p style="text-indent:2em">
+<font color='000000'>目前我国生活垃圾无害化处理的方式主要是卫生填埋和焚烧这两种，而生活垃圾焚烧发电是国家生活垃圾处理的重点关注领域。生活垃圾焚烧炉的有效处理是解决城市环保问题的关键，垃圾焚烧处理优势众多，受到了广泛关注。在“十三五”规划中，针对城市生活垃圾焚烧处理有明确指示，到 2020 年要占到总垃圾处理能力的五成。2018年中国生活垃圾无害化焚烧处理占比为45.1%，仍有加大的发展空间。所以，中国各省相关政府和部门应该要不断推进垃圾无害化焚烧方式的发展，同时需要发动社会和全民动员，充分发挥居民区治理体系的作用，逐渐将垃圾无害化处理情况差异缩小。</font></p>
+</br>
+</br>
+
+
+{{ the_res|safe }}
+
+
+
+</body>
+</html>
