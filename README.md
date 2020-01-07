@@ -12,6 +12,10 @@
 
 本次项目做的是中国各省城市生活垃圾清运和处理情况分析，主要通过生活垃圾清运量、生活垃圾无害化处理量、处理率、处理能力、处理方式（填埋和焚烧）这五个方面进行分析。本项目的意义在于对中国各省城市生活垃圾的清运和处理情况进行可视化分析，从可视化结果针对中国各省解决城市生活垃圾提出有效建议，从而达到缓解垃圾处理压力、促进循环经济和可持续发展的目的。
 
-### 项目数据库下载
+### 项目清单下载
 
-[数据库下载](http://aptx48697.pythonanywhere.com/)
+1. [数据库下载](https://github.com/NFUNM067/data-visualization)
+
+2.[代码查看](https://github.com/NFUNM067/data-visualization/blob/master/%E4%BB%A3%E7%A0%81%E4%B8%8B%E8%BD%BD%E5%92%8C%E8%BF%90%E8%A1%8C/app.ipynb)
+
+3.[代码下载和运行下载](https://github.com/NFUNM067/data-visualization/tree/master/%E4%BB%A3%E7%A0%81%E4%B8%8B%E8%BD%BD%E5%92%8C%E8%BF%90%E8%A1%8C)
